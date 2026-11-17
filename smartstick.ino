@@ -8,12 +8,12 @@
 #define echo2 A3 
  
 // Output/Input 
-#define buzzer 8 
-#define button 9 
+#define buzzer 5 
+#define button 6 
  
 // Modules 
-SoftwareSerial gpsSerial(4, 3); 
-SoftwareSerial gsmSerial(7, 6); 
+SoftwareSerial gpsSerial(11, 10); 
+SoftwareSerial gsmSerial(3, 2); 
  
 TinyGPSPlus gps; 
  
