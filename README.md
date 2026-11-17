@@ -1,4 +1,4 @@
-# 🦯 Smart Assistive Stick
+  # 🦯 Smart Assistive Stick
 
 An Arduino-based assistive device designed to help visually impaired individuals and elderly people navigate their surroundings more safely.
 
@@ -40,13 +40,14 @@ The project uses ultrasonic sensors to detect nearby obstacles and provides audi
 | Ultrasonic Sensor 1 - ECHO | A1 |
 | Ultrasonic Sensor 2 - TRIG | A2 |
 | Ultrasonic Sensor 2 - ECHO | A3 |
-| Buzzer | D8 |
-| Emergency Button | D9 |
-| GPS RX (Arduino) | D4 |
-| GPS TX (Arduino) | D3 |
-| GSM RX (Arduino) | D7 |
-| GSM TX (Arduino) | D6 |
-
+| Buzzer | D5 |
+| Emergency Button | D6 |
+| GPS RX (Arduino) | D10 |
+| GPS TX (Arduino) | D11 |
+| GSM RX (Arduino) | D2 |
+| GSM TX (Arduino) | D3 |
+| VCC (Voltage) |5V|
+| Power Supply | VIN |
 ## ⚙️ How It Works
 
 1. The ultrasonic sensors continuously measure the distance to nearby obstacles.
@@ -78,9 +79,10 @@ The project uses ultrasonic sensors to detect nearby obstacles and provides audi
 ## 🔋 Power Supply Notes
 
 - The SIM800L requires a separate, stable power supply capable of handling its current peaks.
-- Ensure the Arduino and GSM module share a common ground.
+- Ensure the Arduino and every component (i.e. Sensors, GPS, GSM module, buzzer, button) share a common ground.
 - Use an appropriate regulated supply for the Arduino and other components.
-
+- I used a seperate battery to power GSM module but its better to use buck converter to lower the voltage directed towards GSM.
+- Buck converter to be used in the place of 3.7V battery according to diagram
 ## 🔮 Future Improvements
 
 - Vibration-based alerts for improved accessibility.
